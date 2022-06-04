@@ -1,6 +1,6 @@
 class CfgFunctions
 {
-	class Tally
+	class Sub
 	{
 		class DeebsPossession 
 		{
@@ -32,15 +32,16 @@ class CfgFunctions
 			class respawnEH				{file = "\Deebs\functions\fn_respawnEH.sqf"};
 			class initSettings			{file = "\Deebs\functions\fn_initSettings.sqf"};
 			class reApplyZeus			{file = "\Deebs\functions\fn_reApplyZeus.sqf"};
-			class CBA_KeyBinds			{file = "\Deebs\functions\fn_CBA_KeyBinds.sqf"};
+			class CBA_KeyBinds			{file = "\Deebs\functions\fn_CBA_KeyBinds.sqf"; preInit = 1};
 			class deathToggle			{file = "\Deebs\functions\fn_deathToggle.sqf"};
 			class orderByRank			{file = "\Deebs\functions\fn_orderByRank.sqf"};
+			class 3Dtip					{file = "\Deebs\functions\fn_3Dtip.sqf"};
 			
 		};
 	};
 };
 class Extended_PreInit_EventHandlers {
-    class My_pre_init_event {
+    class subsume_preInit_event {
         init = "call compile preprocessFileLineNumbers '\Deebs\CBA3den.sqf'";
     };
 };

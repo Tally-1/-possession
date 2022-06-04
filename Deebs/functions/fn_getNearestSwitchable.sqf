@@ -9,7 +9,7 @@
 
 	{
 		private _unit = (crew _x) # 0;
-		private _switchAble = [_player, _unit] call Tally_Fnc_IsSwitchable; 
+		private _switchAble = [_player, _unit] call Sub_Fnc_IsSwitchable; 
 		
 		if(_switchAble &&{!isAutonomous _x})
 		then{
@@ -19,7 +19,7 @@
 
 	if(count _AllSwitchAbles < 1)exitWith{objNull};
 
-	_AllSwitchAbles = [_AllSwitchAbles] call Tally_Fnc_orderByRank;
+	_AllSwitchAbles = [_AllSwitchAbles] call Sub_Fnc_orderByRank;
 	
 	private _target = _AllSwitchAbles # 0;
 	private _leader = leader (group _target);

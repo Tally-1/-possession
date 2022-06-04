@@ -2,7 +2,7 @@
 params [
 	["_unit", nil, [objNull]]
 ];
-private _newUnit 	 	= [_unit] call Tally_Fnc_getNearestSwitchable;
+private _newUnit 	 	= [_unit] call Sub_Fnc_getNearestSwitchable;
 private _respawnType 	= getMissionConfigValue ["respawn",0];
 private _script 	 	= "";
 private _noRespawnTypes	= [	0,   //disabeled
@@ -16,7 +16,7 @@ private _spawnTypes = [2,3];
 if(_respawnType in _noRespawnTypes)
 then{
 	selectPlayer _newUnit;
-	_script = [_newUnit] spawn Tally_Fnc_TransferControl;
+	_script = [_newUnit] spawn Sub_Fnc_TransferControl;
 };
 
 if(_respawnType in _spawnTypes)

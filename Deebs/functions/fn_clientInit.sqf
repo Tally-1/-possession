@@ -4,9 +4,9 @@ Deebs_myGear 		= getUnitLoadOut player;
 Deebs_myCurator		= getAssignedCuratorLogic player;
 Deebs_SwitchOnDeath	= true;
 
-[] spawn Tally_Fnc_InitPlayer;
-[] spawn Tally_Fnc_initAllAlways; 
-[] call  Tally_Fnc_respawnEH; 
+[] spawn Sub_Fnc_InitPlayer;
+[] spawn Sub_Fnc_initAllAlways; 
+[] call  Sub_Fnc_respawnEH; 
 
 private _respawnType	= getMissionConfigValue ["respawn",0];
 if!(_respawnType in [2,3])

@@ -39,6 +39,6 @@ MissionNameSpace setVariable["Deebs_CloneGroup_C", 		Deebs_CloneGroup_C, true];
 Deebs_CloneGroups = [Deebs_CloneGroup_B, Deebs_CloneGroup_O, Deebs_CloneGroup_I, Deebs_CloneGroup_C];
 {
 	private _unit = _x createUnit ["B_officer_F", [0,0,0], [], 0, "Can_Collide"];
-	[_unit] call Tally_Fnc_MoveToClonePos;
+	[_unit] call Sub_Fnc_MoveToClonePos;
 	hideObjectGlobal _unit;
 }forEach Deebs_CloneGroups;

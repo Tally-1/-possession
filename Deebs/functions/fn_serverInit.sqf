@@ -1,14 +1,15 @@
-[] call Tally_fnc_CBA_KeyBinds;
+// [] call Sub_Fnc_CBA_KeyBinds;
+[] call Sub_Fnc_3Dtip;
 
-if!(isServer)exitWith{[] spawn Tally_Fnc_clientInit};
+if!(isServer)exitWith{[] spawn Sub_Fnc_clientInit};
 
-[] call Tally_Fnc_initSettings;
+[] call Sub_Fnc_initSettings;
 
-// [] call Tally_Fnc_setClonePos;
-// [] call Tally_Fnc_CuratorPossessionInit;
+// [] call Sub_Fnc_setClonePos;
+// [] call Sub_Fnc_CuratorPossessionInit;
 
-[] spawn Tally_Fnc_initAllAlways;
-["Subsume server loaded"] call Tally_Fnc_DebugMsg;
-if(hasInterface)then{[] spawn Tally_Fnc_clientInit};
+[] spawn Sub_Fnc_initAllAlways;
+["Subsume server loaded"] call Sub_Fnc_DebugMsg;
+if(hasInterface)then{[] spawn Sub_Fnc_clientInit};
 
 true; 

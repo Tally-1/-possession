@@ -1,4 +1,4 @@
-// Tally_fnc_CBA_KeyBinds
+// Sub_Fnc_CBA_KeyBinds
 // DOCUMENTATION:
 // https://github-wiki-see.page/m/CBATeam/CBA_A3/wiki/Keybinding
 // https://community.bistudio.com/wiki/DIK_KeyCodes
@@ -6,7 +6,7 @@
 private _modName 		= "Subsume";
 private _actionId 		= "SwitchKey";
 private _displayName 	= ["Switch Key", "Key to press when aiming at the unit you wish to switch to"];
-private _downCode 		= {[] call Tally_Fnc_selectCursorObject};
+private _downCode 		= {[] call Sub_Fnc_selectCursorObject};
 private _upCode 		= "";
 private _defaultKeybind = [35, [false, false, false]];
 
@@ -22,7 +22,7 @@ call CBA_fnc_addKeybind;
 
 _actionId 		= "deathSwitchToggle";
 _displayName 	= ["Death Toggle", "Toggle switching on death"];
-_downCode 		= {[] call Tally_Fnc_deathToggle};
+_downCode 		= {[] call Sub_Fnc_deathToggle};
 _defaultKeybind = [35, [true, false, false]];
 
 
@@ -36,4 +36,4 @@ _defaultKeybind = [35, [true, false, false]];
 ]
 call CBA_fnc_addKeybind;
 
-["KeyBind function executed..."] call Tally_fnc_DebugMSG;
+// ["KeyBind function executed..."] call Sub_Fnc_DebugMSG;

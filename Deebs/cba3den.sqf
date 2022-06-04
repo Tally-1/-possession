@@ -14,6 +14,13 @@
 	1
 ] call cba_settings_fnc_init;
 
+[
+	"Deebs_3d_tip",
+	"CHECKBOX",
+	["3D tooltip", "3D tooltip on switchable units. The text will read 'AVAILABLE'"],
+	"Subsume",
+	true
+] call cba_settings_fnc_init;
 
 [
 	"Deebs_SquadMemberOnDeath",

@@ -7,8 +7,8 @@ private _leader	= (leader _grp == _original);
 
 sleep 2;
 selectPlayer _clone;
-[_original] call Tally_Fnc_MoveToClonePos;
-[_original] spawn Tally_Fnc_AssignToCloneGroup;
+[_original] call Sub_Fnc_MoveToClonePos;
+[_original] spawn Sub_Fnc_AssignToCloneGroup;
 
 _original setVariable ["Deebs_MyClone", _clone, true];
 
@@ -16,7 +16,7 @@ if(_leader)then{
 					sleep 0.1;/*sleep to allow the selectPlayer command to execute properly*/
 					_clone joinAs  [_grp, 1];
 					_grp selectLeader _clone;
-					if(leader _grp == _clone)exitWith{["Clone is leader"] call Tally_Fnc_DebugMsg;};
+					if(leader _grp == _clone)exitWith{["Clone is leader"] call Sub_Fnc_DebugMsg;};
 					/*If selectLeader command failed, bomb the command until it works! */
 					sleep 0.1;
 					_grp selectLeader _clone;
@@ -25,5 +25,5 @@ if(_leader)then{
 					sleep 0.1;					
 				};
 
-["Player cloned"] call Tally_Fnc_DebugMsg;
+["Player cloned"] call Sub_Fnc_DebugMsg;
 true

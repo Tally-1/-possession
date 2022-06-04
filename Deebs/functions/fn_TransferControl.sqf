@@ -1,7 +1,7 @@
 
 	params ["_target", "_objectToDelete", "_camPos"];
 	if(isNil "_target"
-	or isNull _target)exitWith{["Could not transfer, target is undefined"] call Tally_Fnc_DebugMsg};
+	or isNull _target)exitWith{["Could not transfer, target is undefined"] call Sub_Fnc_DebugMsg};
 	
 	[
 		(rank _target), 
@@ -39,7 +39,7 @@
 	_cam cameraEffect ["terminate", "back"];
 	camDestroy _cam;
 
-	[] spawn Tally_Fnc_reApplyZeus;
+	[] spawn Sub_Fnc_reApplyZeus;
 
 	if(_delete)then{deleteVehicle _objectToDelete};
 

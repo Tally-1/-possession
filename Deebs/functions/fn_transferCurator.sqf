@@ -14,7 +14,7 @@ if(!isNil "_curator")
 	}};
 
 if(_counter > 99)then{
-	["could not complete curator transfer"] call Tally_Fnc_DebugMsg;
+	["could not complete curator transfer"] call Sub_Fnc_DebugMsg;
 	_sucsess = false;
 	};
 

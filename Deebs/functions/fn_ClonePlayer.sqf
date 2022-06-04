@@ -16,6 +16,6 @@ _clone setDir	 _Dir;
 
 if(_leader)then{[_group, _clone] remoteExec ["selectLeader", (groupOwner _group)]};
 
-[_Player, _clone] call Tally_Fnc_transferCurator;
+[_Player, _clone] call Sub_Fnc_transferCurator;
 
 [_clone, _Player]

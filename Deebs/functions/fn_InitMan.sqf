@@ -11,11 +11,11 @@
 	_man setVariable ["Deebs_initDone", true, true];
 	_man setVariable ["Deebs_Side", (side _man), true];
 	
-	// [_man] call Tally_Fnc_deathEH;
+	// [_man] call Sub_Fnc_deathEH;
 
 
 /*
 	if(_respawnType in [2,3])
-	then{[_man] call Tally_Fnc_respawnEH};
+	then{[_man] call Sub_Fnc_respawnEH};
 
 	*/

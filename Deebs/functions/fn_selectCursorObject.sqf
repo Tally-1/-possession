@@ -19,8 +19,8 @@
 				};
 		};
 
-	_target = [_target] call Tally_Fnc_getTargetUnit;
+	_target = [_target] call Sub_Fnc_getTargetUnit;
 	if(isNull _target)exitWith{hint "Cannot transfer conciousness"};
 
-	[_target] spawn Tally_Fnc_TransferControl; 
+	[_target] spawn Sub_Fnc_TransferControl; 
 	

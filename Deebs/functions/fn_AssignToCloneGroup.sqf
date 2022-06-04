@@ -32,5 +32,5 @@ if!(_unit in (units _group))then{[_Unit] remoteExecCall ["join", 0]};
 sleep 0.1;
 if(_unit in (units _group))exitWith{};
 
-["Could not assign to cloneGroup"]call Tally_fnc_debugMsg;
+["Could not assign to cloneGroup"]call Sub_Fnc_debugMsg;
 true
