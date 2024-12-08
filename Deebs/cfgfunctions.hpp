@@ -40,6 +40,7 @@ class CfgFunctions
 		};
 	};
 };
+
 class Extended_PreInit_EventHandlers {
     class subsume_preInit_event {
         init = "call compile preprocessFileLineNumbers '\Deebs\CBA3den.sqf'";
